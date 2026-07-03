@@ -9,8 +9,8 @@ Alertive is a secure healthcare communication platform that enables clinicians a
 
 ## Contents
 
-- [Overview
-- [Installation](#installationsetup
+- Overview
+- Installation](#installationsetup
 - [Starting Your Shift
 - [Roles and Handvers
 - #finding-people
