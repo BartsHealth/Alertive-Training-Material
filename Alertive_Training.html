@@ -45,6 +45,51 @@
   .placeholder .icon { font-size: 3em; margin-bottom: 15px; }
   .placeholder h2 { color: var(--navy); margin: 0 0 10px; }
   .placeholder p { color: #4a5a6e; margin: 0; }
+  .session-card {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-top: 20px;
+    border: 2px solid transparent;
+    transition: border-color 0.15s ease;
+  }
+  .session-card:hover { border-color: var(--teal); }
+  .session-card h2 {
+    color: var(--navy);
+    margin: 0 0 6px;
+    font-size: 1.3em;
+  }
+  .session-meta {
+    color: #4a5a6e;
+    margin: 0 0 4px;
+    font-size: 0.98em;
+  }
+  .session-meta strong { color: var(--navy); }
+  .session-actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .session-actions a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+  }
+  .btn-join {
+    background: var(--teal);
+    color: #fff;
+  }
+  .btn-join:hover { background: #24a0ac; }
+  .btn-calendar {
+    background: #fff;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+  }
+  .btn-calendar:hover { background: var(--navy); color: #fff; }
   footer {
     text-align: center;
     padding: 30px;
@@ -59,6 +104,9 @@
     main { padding: 16px 20px 40px; }
     .back-link { margin: 20px 20px 0; }
     .placeholder { padding: 30px 20px; }
+    .session-card { padding: 20px; }
+    .session-actions { flex-direction: column; }
+    .session-actions a { text-align: center; }
   }
 </style>
 </head>
@@ -73,10 +121,22 @@
 <a class="back-link" href="Alertive_Guide_Menu.html">← Back to menu</a>
 
 <main>
+  <div class="session-card">
+    <h2>Alertive Training — Drop-in Session</h2>
+    <p class="session-meta"><strong>Date:</strong> Thursday 16 July 2026</p>
+    <p class="session-meta"><strong>Time:</strong> 16:00 – 16:30 (BST)</p>
+    <p class="session-meta"><strong>Location:</strong> Microsoft Teams Meeting</p>
+    <p class="session-meta">This is a drop-in session, so you're welcome to join anytime during the session.</p>
+    <div class="session-actions">
+      <a class="btn-join" href="https://teams.microsoft.com/meet/396640505648532?p=jGIFT89NYhvHgs7Vt9" target="_blank" rel="noopener noreferrer">Join Teams meeting</a>
+      <a class="btn-calendar" href="Alertive_Training_16_00-16_30_16_072026.ics" download>Add to calendar</a>
+    </div>
+  </div>
+
   <div class="placeholder">
     <div class="icon">🎓</div>
-    <h2>Training content coming soon.</h2>
-    <p>This section will hold live training session details, schedules, and supporting materials for your team.</p>
+    <h2>More sessions coming soon.</h2>
+    <p>This section will grow to hold further training session details, schedules, and supporting materials for your team.</p>
   </div>
 </main>
 
