@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alertive — Videos</title>
+<style>
+  :root {
+    --navy: #17335e;
+    --teal: #2bb6c4;
+    --light-bg: #e3f2f6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: #2c2c2c;
+    margin: 0;
+    background: #fff;
+    line-height: 1.6;
+  }
+  .cover {
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  .cover h1 { font-size: 2.2em; margin-bottom: 0.2em; word-wrap: break-word; }
+  .cover h1 .accent { color: var(--teal); }
+  .cover p { font-size: 1em; }
+  main { max-width: 850px; margin: 0 auto; padding: 20px 40px 60px; }
+  .back-link {
+    display: inline-block;
+    margin: 30px 40px 0;
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .placeholder {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .placeholder .icon { font-size: 3em; margin-bottom: 15px; }
+  .placeholder h2 { color: var(--navy); margin: 0 0 10px; }
+  .placeholder p { color: #4a5a6e; margin: 0; }
+  .video-card {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .video-card h2 {
+    color: var(--navy);
+    margin: 0 0 6px;
+    font-size: 1.2em;
+  }
+  .video-card p {
+    color: #4a5a6e;
+    margin: 0 0 14px;
+    font-size: 0.95em;
+  }
+  .video-card video {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    background: #000;
+  }
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--navy);
+    font-weight: bold;
+  }
+  a.site { color: var(--teal); }
+
+  @media (max-width: 700px) {
+    .cover { padding: 35px 16px; }
+    .cover h1 { font-size: 1.6em; }
+    main { padding: 16px 20px 40px; }
+    .back-link { margin: 20px 20px 0; }
+    .placeholder { padding: 30px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1><span class="accent">Alertive</span></h1>
+  <h1>Videos</h1>
+  <p>Short walkthroughs of key features</p>
+</div>
+
+<a class="back-link" href="Alertive_Guide_Menu.html">← Back to menu</a>
+
+<main>
+  <div class="video-card">
+    <h2>Web Login</h2>
+    <p>A walkthrough of logging in to Alertive via the web.</p>
+    <video controls preload="metadata">
+      <source src="Alertive_web_login.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="placeholder">
+    <div class="icon">🎬</div>
+    <h2>More videos coming soon.</h2>
+    <p>This section will grow to cover sign-in, roles, alerts, tasks, and more.</p>
+  </div>
+</main>
+
+<footer>
+  Alertive Videos &nbsp;|&nbsp; <a class="site" href="https://alertive.co.uk">alertive.co.uk</a>
+</footer>
+
+</body>
+</html>

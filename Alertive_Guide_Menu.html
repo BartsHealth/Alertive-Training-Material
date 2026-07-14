@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alertive — Training Guides</title>
+<style>
+  :root {
+    --navy: #17335e;
+    --teal: #2bb6c4;
+    --light-bg: #e3f2f6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .cover {
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 70px 20px;
+  }
+  .cover h1 { font-size: 2.6em; margin-bottom: 0.2em; word-wrap: break-word; }
+  .cover h1 .accent { color: var(--teal); }
+  .cover p { font-size: 1.1em; }
+  main {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    width: 100%;
+  }
+  main h2 {
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .menu-item {
+    display: block;
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 35px 25px;
+    text-decoration: none;
+    color: var(--navy);
+    text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border: 2px solid transparent;
+  }
+  .menu-item:hover, .menu-item:active {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(23,51,94,0.15);
+    border-color: var(--teal);
+  }
+  .menu-item .icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  .menu-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.3em;
+    color: var(--navy);
+  }
+  .menu-item p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #4a5a6e;
+  }
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--navy);
+    font-weight: bold;
+  }
+  a.site { color: var(--teal); }
+
+  @media (max-width: 700px) {
+    .cover { padding: 45px 16px; }
+    .cover h1 { font-size: 1.8em; }
+    .cover p { font-size: 1em; }
+    main { padding: 40px 20px; }
+    main h2 { font-size: 1.3em; margin-bottom: 28px; }
+    .menu { grid-template-columns: 1fr; gap: 20px; }
+    .menu-item { padding: 28px 20px; }
+  }
+
+  @media (max-width: 400px) {
+    .cover h1 { font-size: 1.5em; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1><span class="accent">Alertive</span></h1>
+  <h1>Training Guides</h1>
+  <p>Messaging for the Healthcare Workforce</p>
+</div>
+
+<main>
+  <h2>Choose a guide.</h2>
+  <div class="menu">
+    <a class="menu-item" href="Alertive_Brief_Guide.html">
+      <div class="icon">⚡</div>
+      <h3>Brief Training Guide</h3>
+      <p>A quick-reference summary covering the essentials — perfect for a fast overview or refresher.</p>
+    </a>
+    <a class="menu-item" href="Alertive_Full_User_Guide.html">
+      <div class="icon">📘</div>
+      <h3>Detailed Training Guide</h3>
+      <p>The complete, full-detail user guide with every screen and instruction, exactly as published.</p>
+    </a>
+    <a class="menu-item" href="Alertive_Training.html">
+      <div class="icon">🎓</div>
+      <h3>Training</h3>
+      <p>Training resources and sessions to help your team get the most out of Alertive.</p>
+    </a>
+    <a class="menu-item" href="Alertive_Videos.html">
+      <div class="icon">🎬</div>
+      <h3>Videos</h3>
+      <p>Short video walkthroughs covering key features of the app.</p>
+    </a>
+  </div>
+</main>
+
+<footer>
+  Alertive Training Guides &nbsp;|&nbsp; <a class="site" href="https://alertive.co.uk">alertive.co.uk</a>
+</footer>
+
+</body>
+</html>
