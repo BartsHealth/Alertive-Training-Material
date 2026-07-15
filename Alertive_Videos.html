@@ -67,6 +67,37 @@
     display: block;
     background: #000;
   }
+  .video-card { scroll-margin-top: 20px; }
+  .video-nav {
+    max-width: 850px;
+    margin: 20px auto 0;
+    padding: 0 40px;
+  }
+  .video-nav label {
+    display: block;
+    color: var(--navy);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+  }
+  .video-nav select {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--teal);
+    background: #fff;
+    color: var(--navy);
+    font-size: 1em;
+    font-family: inherit;
+    font-weight: 600;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2317335e'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 20px;
+  }
+  .video-nav select:focus { outline: none; border-color: var(--navy); }
   footer {
     text-align: center;
     padding: 30px;
@@ -81,6 +112,7 @@
     main { padding: 16px 20px 40px; }
     .back-link { margin: 20px 20px 0; }
     .placeholder { padding: 30px 20px; }
+    .video-nav { padding: 0 20px; }
   }
 </style>
 </head>
@@ -94,62 +126,23 @@
 
 <a class="back-link" href="Alertive_Guide_Menu.html">← Back to menu</a>
 
+<div class="video-nav">
+  <label for="videoSelect">Jump to a video:</label>
+  <select id="videoSelect" onchange="if(this.value){document.getElementById(this.value).scrollIntoView({behavior:'smooth'});}">
+    <option value="">Select a video…</option>
+    <option value="video-ios">Alertive on iOS</option>
+    <option value="video-android">Alertive on Android</option>
+    <option value="video-weblogin">Web Login</option>
+    <option value="video-roles">Roles within Alertive</option>
+    <option value="video-roles-mobile">Roles on Mobile</option>
+    <option value="video-emergency">Emergency Alerts</option>
+    <option value="video-alerts-mobile">Alerts on Mobile</option>
+    <option value="video-alerts-web">Alerts on the Web</option>
+  </select>
+</div>
+
 <main>
-  <div class="video-card">
-    <h2>Web Login</h2>
-    <p>A walkthrough of logging in to Alertive via the web.</p>
-    <video controls preload="metadata">
-      <source src="Alertive_web_login.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <div class="video-card">
-    <h2>Roles within Alertive</h2>
-    <p>How roles work in Alertive, and how to acquire, give, take, and relinquish them.</p>
-    <video controls preload="metadata">
-      <source src="Roles_within_Alertive.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <div class="video-card">
-    <h2>Roles on Mobile</h2>
-    <p>Managing roles from the Alertive mobile app.</p>
-    <video controls preload="metadata">
-      <source src="Alertive_roles_for_mobile_v2.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <div class="video-card">
-    <h2>Emergency Alerts</h2>
-    <p>Sending and responding to emergency alerts in Alertive.</p>
-    <video controls preload="metadata">
-      <source src="Emergency_Alerts.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <div class="video-card">
-    <h2>Alerts on Mobile</h2>
-    <p>Creating, receiving, and responding to alerts on the mobile app.</p>
-    <video controls preload="metadata">
-      <source src="Alerts_on_mobile.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <div class="video-card">
-    <h2>Alerts on the Web</h2>
-    <p>Creating, receiving, and responding to alerts via the web app.</p>
-    <video controls preload="metadata">
-      <source src="Alertive_alerts_web_v2.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <div class="video-card">
+  <div class="video-card" id="video-ios">
     <h2>Alertive on iOS</h2>
     <p>Setting up and using Alertive on an iPhone or iPad.</p>
     <video controls preload="metadata">
@@ -158,11 +151,65 @@
     </video>
   </div>
 
-  <div class="video-card">
+  <div class="video-card" id="video-android">
     <h2>Alertive on Android</h2>
     <p>Setting up and using Alertive on Android devices.</p>
     <video controls preload="metadata">
       <source src="Alertive_Android_devices_v2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="video-card" id="video-weblogin">
+    <h2>Web Login</h2>
+    <p>A walkthrough of logging in to Alertive via the web.</p>
+    <video controls preload="metadata">
+      <source src="Alertive_web_login.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="video-card" id="video-roles">
+    <h2>Roles within Alertive</h2>
+    <p>How roles work in Alertive, and how to acquire, give, take, and relinquish them.</p>
+    <video controls preload="metadata">
+      <source src="Roles_within_Alertive.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="video-card" id="video-roles-mobile">
+    <h2>Roles on Mobile</h2>
+    <p>Managing roles from the Alertive mobile app.</p>
+    <video controls preload="metadata">
+      <source src="Alertive_roles_for_mobile_v2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="video-card" id="video-emergency">
+    <h2>Emergency Alerts</h2>
+    <p>Sending and responding to emergency alerts in Alertive.</p>
+    <video controls preload="metadata">
+      <source src="Emergency_Alerts.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="video-card" id="video-alerts-mobile">
+    <h2>Alerts on Mobile</h2>
+    <p>Creating, receiving, and responding to alerts on the mobile app.</p>
+    <video controls preload="metadata">
+      <source src="Alerts_on_mobile.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="video-card" id="video-alerts-web">
+    <h2>Alerts on the Web</h2>
+    <p>Creating, receiving, and responding to alerts via the web app.</p>
+    <video controls preload="metadata">
+      <source src="Alertive_alerts_web_v2.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
