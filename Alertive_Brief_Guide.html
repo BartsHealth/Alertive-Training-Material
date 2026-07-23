@@ -39,6 +39,7 @@
     margin-bottom: 4px;
   }
   section h2 .dot { color: var(--teal); }
+  section h2 .important-flag { color: #d32f2f; }
   section h2::after {
     content: "";
     display: block;
@@ -190,6 +191,18 @@
     <li>Share feedback directly in the app</li>
     <li>Invite colleagues to join Alertive</li>
     <li>Access training materials and support via the Help section</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="important-flag">IMPORTANT</span> - Stopping Android from Sleeping the App<span class="dot">.</span></h2>
+  <ul>
+    <li>Android's battery optimisation can delay or block alerts by putting Alertive to "sleep" in the background</li>
+    <li>Go to <strong>Settings → Apps → Alertive → Battery</strong></li>
+    <li>Select <strong>Unrestricted</strong> (or turn off "Optimise battery use" for Alertive)</li>
+    <li>On some devices, also check <strong>Settings → Battery → Battery Optimisation</strong>, find Alertive, and choose <strong>Don't optimise</strong></li>
+    <li>Manufacturer extras (Samsung, Xiaomi, Huawei, OnePlus, etc.) may have their own power-saving lists — add Alertive as a protected/allowed app there too</li>
+    <li>This ensures critical alerts and notifications are never delayed by the device going into deep sleep</li>
   </ul>
 </section>
 
