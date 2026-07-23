@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft//Outlook Web//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:040000008200E00074C5B7101A82E00800000000413AA8BE871ADD01000000000000000
+ 01000000012E3C8D3C822C34C932FB5A7F0DD5753
+DTSTAMP:20260723T094354Z
+DTSTART:20260724T103000Z
+DTEND:20260724T130000Z
+SUMMARY:RLH Alertive Teams drop in training sessions ICT/Comms Stepney Way 
+ Fri 24th July (weekly) 11.30am- 2pm
+LOCATION:Stepney Way Atrium
+DESCRIPTION:There will be a stand in the RLH Stepney Way Atrium where anyon
+ e can drop in and ask questions or receive training.Hope to see you thereT
+ he Alertive Team
+X-ALT-DESC;FMTTYPE=text/html:<div class="cal_8ef3"><div><div class="x_eleme
+ ntToProof" style="font-family:Aptos\,Aptos_EmbeddedFont\,Aptos_MSFontServi
+ ce\,Calibri\,Helvetica\,sans-serif\; font-size:11pt\; color:rgb(0\,0\,0)">
+ There will be a stand in the RLH Stepney Way Atrium where anyone can drop 
+ in and ask questions or receive training.</div><div class="x_elementToProo
+ f" style="font-family:Aptos\,Aptos_EmbeddedFont\,Aptos_MSFontService\,Cali
+ bri\,Helvetica\,sans-serif\; font-size:11pt\; color:rgb(0\,0\,0)"><br></di
+ v><div class="x_elementToProof" style="font-family:Aptos\,Aptos_EmbeddedFo
+ nt\,Aptos_MSFontService\,Calibri\,Helvetica\,sans-serif\; font-size:11pt\;
+  color:rgb(0\,0\,0)">Hope to see you there</div><div class="x_elementToPro
+ of" style="font-family:Aptos\,Aptos_EmbeddedFont\,Aptos_MSFontService\,Cal
+ ibri\,Helvetica\,sans-serif\; font-size:11pt\; color:rgb(0\,0\,0)"><br></d
+ iv><div class="x_elementToProof" style="font-family:Aptos\,Aptos_EmbeddedF
+ ont\,Aptos_MSFontService\,Calibri\,Helvetica\,sans-serif\; font-size:11pt\
+ ; color:rgb(0\,0\,0)">The Alertive Team</div></div></div>
+ORGANIZER;CN=ALERTIVE (BARTS HEALTH NHS TRUST):mailto:bartshealth.alertive@
+ nhs.net
+ATTENDEE;ROLE=REQ-PARTICIPANT;CN=ALERTIVE (BARTS HEALTH NHS TRUST):mailto:b
+ artshealth.alertive@nhs.net
+ATTENDEE;ROLE=REQ-PARTICIPANT;CN=MOONEY\, Dave (BARTS HEALTH NHS TRUST):mai
+ lto:david.mooney2@nhs.net
+STATUS:TENTATIVE
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

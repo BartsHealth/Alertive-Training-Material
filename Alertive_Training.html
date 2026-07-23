@@ -65,6 +65,25 @@
     font-size: 0.98em;
   }
   .session-meta strong { color: var(--navy); }
+  .session-card.in-person {
+    background: #0c2340;
+  }
+  .session-card.in-person:hover { border-color: var(--teal); }
+  .session-card.in-person h2 { color: #fff; }
+  .session-card.in-person .session-meta { color: #cfd9e8; }
+  .session-card.in-person .session-meta strong { color: #fff; }
+  .badge-in-person {
+    display: inline-block;
+    background: var(--teal);
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
   .session-actions {
     margin-top: 18px;
     display: flex;
@@ -143,6 +162,18 @@
     <div class="session-actions">
       <a class="btn-join" href="https://teams.microsoft.com/meet/351547238111272?p=0FGTNJ8EvDgrrUOoM7" target="_blank" rel="noopener noreferrer">Join Teams meeting</a>
       <a class="btn-calendar" href="Alertive_Training_10_00-10_30_24_072026.ics" download>Add to calendar</a>
+    </div>
+  </div>
+
+  <div class="session-card in-person">
+    <span class="badge-in-person">In-Person</span>
+    <h2>Alertive Drop-in Session — ICT/Comms Stand</h2>
+    <p class="session-meta"><strong>Date:</strong> Friday 24 July 2026 (weekly)</p>
+    <p class="session-meta"><strong>Time:</strong> 11:30 – 14:00 (BST)</p>
+    <p class="session-meta"><strong>Location:</strong> RLH Stepney Way Atrium</p>
+    <p class="session-meta">Drop by the stand in the Atrium to ask questions or get hands-on training — no need to book, just come along.</p>
+    <div class="session-actions">
+      <a class="btn-calendar" href="RLH_Alertive_Teams_drop_in_training_sessions_ICT_Comms_Stepney_Way_Fri_24th_July__weekly__11_30am-_2pm.ics" download>Add to calendar</a>
     </div>
   </div>
 
