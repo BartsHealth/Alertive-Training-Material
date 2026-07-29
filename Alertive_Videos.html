@@ -141,6 +141,7 @@
   <label for="videoSelect">Jump to a video:</label>
   <select id="videoSelect" onchange="if(this.value){document.getElementById(this.value).scrollIntoView({behavior:'smooth'});}">
     <option value="">Select a video…</option>
+    <option value="video-complete-guide">Complete Alertive usage guide</option>
     <option value="video-ios">Alertive on iOS</option>
     <option value="video-android">Alertive on Android</option>
     <option value="video-weblogin">Web Login</option>
@@ -153,6 +154,16 @@
 </div>
 
 <main>
+  <div class="video-card" id="video-complete-guide">
+    <h2>Complete Alertive usage guide</h2>
+    <p>A full walkthrough covering setup, starting your shift, alerts, chats and conversations, and managing handovers and roles.</p>
+    <video controls preload="metadata">
+      <source src="Alertive_Training_Combined_compressed.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <a class="top-link" href="#top">↑ Back to top</a>
+  </div>
+
   <div class="video-card" id="video-ios">
     <h2>Alertive on iOS</h2>
     <p>Setting up and using Alertive on an iPhone or iPad.</p>
