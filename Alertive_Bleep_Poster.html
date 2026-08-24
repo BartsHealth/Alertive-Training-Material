@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alertive — Bleeping from Phones</title>
+<style>
+  :root {
+    --navy: #17335e;
+    --navy-deep: #0c2340;
+    --teal: #2bb6c4;
+    --light-bg: #e3f2f6;
+    --text: #2c2c2c;
+    --amber: #e0a530;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: var(--text);
+    margin: 0;
+    background: #fff;
+    line-height: 1.6;
+  }
+  .cover {
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  .cover h1 { font-size: 2.2em; margin-bottom: 0.2em; word-wrap: break-word; }
+  .cover h1 .accent { color: var(--teal); }
+  .cover p { font-size: 1em; }
+  main { max-width: 850px; margin: 0 auto; padding: 20px 40px 60px; }
+  .back-link {
+    display: inline-block;
+    margin: 30px 40px 0;
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  section {
+    padding: 28px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  section h2 {
+    font-size: 1.6em;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  section h2 .dot { color: var(--teal); }
+  section h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--teal);
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .format-card {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin-top: 8px;
+  }
+  .format-label {
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .format-parts {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 1.6em;
+    font-weight: 800;
+    color: var(--navy);
+  }
+  .format-parts .plus { color: #90a0b5; font-weight: 400; }
+  .format-parts .site { color: var(--navy); }
+  .format-parts .bleep { color: var(--teal); }
+  .format-parts .ext { color: var(--amber); }
+  .format-sub {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #4a5a6e;
+  }
+
+  .prefix-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 16px;
+  }
+  .prefix-card {
+    background: var(--light-bg);
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .prefix-card .num {
+    font-size: 1.6em;
+    font-weight: 800;
+    color: var(--teal);
+  }
+  .prefix-card .site-name {
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .app-note {
+    background: var(--navy-deep);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  ul.dial-steps { margin: 18px 0 0; padding-left: 22px; }
+  ul.dial-steps li { margin-bottom: 10px; }
+  ul.dial-steps strong { color: var(--navy); }
+
+  .dial-mock {
+    background: #0c1526;
+    border-radius: 20px;
+    padding: 24px 22px;
+    color: #fff;
+    max-width: 320px;
+    margin: 24px auto 0;
+    text-align: center;
+  }
+  .dial-mock .heading { font-weight: 700; margin-bottom: 18px; color: #dfe6ef; }
+  .dial-mock .row { margin-bottom: 16px; }
+  .dial-mock .row .caption {
+    font-size: 0.7em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8a9bb5;
+    margin-bottom: 4px;
+  }
+  .dial-mock .row .value { font-size: 1.8em; font-weight: 800; }
+  .dial-mock .value.site { color: #fff; }
+  .dial-mock .value.bleep { color: var(--teal); }
+  .dial-mock .value.ext { color: var(--amber); }
+  .dial-mock .site-tag { font-size: 0.7em; color: #8a9bb5; margin-top: 2px; }
+  .dial-mock .footnote { font-size: 0.8em; color: #8a9bb5; margin-top: 16px; }
+
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--navy);
+    font-weight: bold;
+  }
+  a.site { color: var(--teal); }
+
+  @media (max-width: 700px) {
+    .cover { padding: 35px 16px; }
+    .cover h1 { font-size: 1.6em; }
+    .cover p { font-size: 0.95em; }
+    main { padding: 16px 20px 40px; }
+    section { padding: 20px 0; }
+    section h2 { font-size: 1.3em; }
+    .back-link { margin: 20px 20px 0; }
+    .prefix-grid { grid-template-columns: 1fr; }
+    .format-parts { font-size: 1.3em; }
+  }
+
+  @media (max-width: 400px) {
+    .cover h1 { font-size: 1.3em; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1><span class="accent">Alertive</span></h1>
+  <h1>Bleeping from Phones</h1>
+  <p>Dial all 5 digits of the extension number — every time</p>
+</div>
+
+<a class="back-link" href="Alertive_Guide_Menu.html">← Back to menu</a>
+
+<main>
+
+<section>
+  <h2>Full Format<span class="dot">.</span></h2>
+  <div class="format-card">
+    <div class="format-label">Full format</div>
+    <div class="format-parts">
+      <span class="site">SITE</span>
+      <span class="plus">+</span>
+      <span class="bleep">1234</span>
+      <span class="plus">+</span>
+      <span class="ext">12345</span>
+    </div>
+    <div class="format-sub">
+      <span>2-digit site prefix</span>
+      <span>4-digit Bleep number</span>
+      <span>5-digit extension</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Site Prefixes<span class="dot">.</span></h2>
+  <div class="prefix-grid">
+    <div class="prefix-card"><span class="num">66</span><span class="site-name">NUH</span></div>
+    <div class="prefix-card"><span class="num">81</span><span class="site-name">RLH</span></div>
+    <div class="prefix-card"><span class="num">51</span><span class="site-name">SBH</span></div>
+    <div class="prefix-card"><span class="num">71</span><span class="site-name">WCH</span></div>
+  </div>
+  <div class="app-note">
+    Phone bleeps now also alert Alertive — check the app as well as your Bleep.
+  </div>
+</section>
+
+<section>
+  <h2>How to Dial<span class="dot">.</span></h2>
+  <ul class="dial-steps">
+    <li><strong>Dial all 11 digits:</strong> site prefix + Bleep number + extension, in full.</li>
+    <li><strong>Use the prefix</strong> for the site you are calling — 66, 81, 51 or 71.</li>
+    <li><strong>Save the full number</strong> in your contacts to get it right, always.</li>
+  </ul>
+
+  <div class="dial-mock">
+    <div class="heading">Dialling bleep…</div>
+    <div class="row">
+      <div class="caption">Site prefix</div>
+      <div class="value site">66</div>
+      <div class="site-tag">NUH</div>
+    </div>
+    <div class="row">
+      <div class="caption">Bleep number (4)</div>
+      <div class="value bleep">1234</div>
+    </div>
+    <div class="row">
+      <div class="caption">Extension (5)</div>
+      <div class="value ext">12345</div>
+    </div>
+    <div class="footnote">11 digits, correctly entered, first time.</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Alertive Bleeping from Phones &nbsp;|&nbsp; Contact the Alertive Team on <a class="site" href="mailto:bartshealth.alertive@nhs.net">bartshealth.alertive@nhs.net</a> for further information.
+</footer>
+
+</body>
+</html>
